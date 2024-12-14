@@ -20,7 +20,7 @@ int main(){
 	cout << setw(13) << left << "NewBalance";
 	cout << "\n";
 	
-	int month = 1;
+	int year = 1;
 	PrevBalance = loan;
 	interest = PrevBalance * (interestRate / 100.0);
 	total = PrevBalance + interest;
@@ -29,14 +29,14 @@ int main(){
     }
 	NewBalance = total - pay;
 	cout << fixed << setprecision(2); 
-	cout << setw(13) << left << month; 
+	cout << setw(13) << left << year; 
 	cout << setw(13) << left << PrevBalance;
     cout << setw(13) << left << interest;
     cout << setw(13) << left << total;
     cout << setw(13) << left << pay;
     cout << setw(13) << left << NewBalance;
     cout << "\n";
-    month++;
+    year++;
 	while(NewBalance>0){
 	    PrevBalance = NewBalance;
 	    interest = PrevBalance * (interestRate / 100.0);
@@ -49,7 +49,7 @@ int main(){
     	    }
     	    
 	    cout << fixed << setprecision(2); 
-	    cout << setw(13) << left << month; 
+	    cout << setw(13) << left << year; 
 	    cout << setw(13) << left << PrevBalance;
 	    cout << setw(13) << left << interest;
 	    cout << setw(13) << left << total;
@@ -57,7 +57,7 @@ int main(){
     	cout << setw(13) << left << NewBalance;
     	cout << "\n";
     	
-    	month++;	
+    	year++;	
 	
 	}
 	
